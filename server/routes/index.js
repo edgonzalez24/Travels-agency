@@ -4,13 +4,15 @@ const router = express.Router();
 module.exports = function() {
     // USE -> Acepta todos los verbos de http
     // GET -> Acepta solo GET 
+    // Render / Send
+    // Render + Name File views
     router.get('/', (req, res) => {
-        res.send('Home')
+        res.render('index')
     })
 
     // Routing
     router.get('/nosotros', (req, res) => {
-        res.send('Nosotros')
+        res.render('nosotros')
     })
 
     return router;

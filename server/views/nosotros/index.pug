@@ -1,4 +1,27 @@
 extends ../layout/index
 block contenido
-  div
-    h1.text-uppercase Nosotros
+  main.container.mt-5
+    .row
+      .col-md-5
+        img(src="img/nosotros.jpg", alt="Imagen de nosotros" , class="img-fluid")
+      .col-md-7
+        h1.text-uppercase= pagina
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus rerum aspernatur voluptatum sequi voluptate, quidem beatae libero ipsum tenetur aliquam numquam necessitatibus error consequuntur incidunt similique fugit dolor repudiandae?
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam explicabo doloribus enim reprehenderit vel! Reiciendis explicabo dolorem illo non mollitia assumenda aut tempora dolores maxime, magnam asperiores autem cupiditate corrupti.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore doloremque illum blanditiis quas. Non, animi perspiciatis. Quia pariatur maxime, iste ratione nihil deleniti, cumque provident dolore ducimus, perferendis atque tenetur?
+  .listado-iconos
+    .container.mt-5.py-5.text-center  
+      .row 
+        .col-md-4
+          img(src="img/icono_seguridad.svg", alt="", class="img-fluid mb-4")
+          h2.mb-4 Seguridad
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        .col-md-4
+          img(src="img/icono_destinos.svg", alt="", class="img-fluid mb-4")
+          h2.mb-4 Mejores Destinos
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        .col-md-4  
+          img(src="img/icono_precios.svg", alt="", class="img-fluid mb-4")
+          h2.mb-4 Mejores precios
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+    

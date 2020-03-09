@@ -7,13 +7,17 @@ module.exports = function() {
     // Render / Send
     // Render + Name File views
     router.get('/', (req, res) => {
-        res.render('index')
+        res.render('index', {
+            pagina: 'Home'
+        })
     })
 
     // Routing
     router.get('/nosotros', (req, res) => {
-        res.render('nosotros')
-    })
+        res.render('nosotros', {
+            pagina: 'Nosotros'
+        });
+    });
 
     return router;
 }

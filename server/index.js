@@ -1,8 +1,9 @@
 // Immportar Express
 const express = require('express');
-const routes = require('./routes')
-const path = require('path')
-const configs = require('./config')
+const routes = require('./routes');
+const bodyParser = require('body-parser');
+const path = require('path');
+const configs = require('./config');
 
 
 // test DB conection
@@ -30,13 +31,17 @@ app.locals.titulo = config.nombresitio;
 
 // Mostrar fecha actual
 app.use((req, res, next) => {
-        const fecha = new Date();
-        res.locals.fechaActual = fecha.getFullYear();
-        console.log(res.locals)
-        return next();
+    const fecha = new Date();
+    res.locals.fechaActual = fecha.getFullYear();
+    console.log(res.locals)
+    return next();
 
-    })
-    // Cargar
+})
+
+//Ejecutar el body-parser
+app.use(bodyParser.urlencoded({ extended: true }))
+
+// Cargar rutas
 app.use('/', routes());
 
 app.listen(3000);

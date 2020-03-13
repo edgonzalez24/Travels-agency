@@ -55,7 +55,7 @@ module.exports = function() {
             }))
     });
     router.post('/testimoniales', (req, res) => {
-        // console.log(req.body)
+        console.log(req.body)
         let { nombre, correo, mensaje } = req.body;
         let errores = [];
         if (!nombre) {
